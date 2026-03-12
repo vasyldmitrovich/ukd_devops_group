@@ -1,0 +1,21 @@
+08:53
+-rw-------   1 root root 2147483648 Jan 10  2024 swap.img
+lrwxrwxrwx   1 root root          9 Aug 10  2023 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root          9 Aug 10  2023 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root          8 Aug 10  2023 sbin -> usr/sbin
+lrwxrwxrwx   1 root root          7 Aug 10  2023 lib -> usr/lib
+Linux machine 5.15.0-91-generic #101-Ubuntu SMP Tue Nov 14 13:30:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+08:53
+ 08:53:15 up 45 min,  1 user,  load average: 0.10, 0.04, 0.12
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              382M  956K  381M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   62G  5.2G   54G   9% /
+tmpfs                              1.9G     0  1.9G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/sda2                          2.0G  234M  1.6G  13% /boot
+tmpfs                              382M  4.0K  382M   1% /run/user/1000
+-rw-------   1 root root 2147483648 Jan 10  2024 swap.img
+lrwxrwxrwx   1 root root          9 Aug 10  2023 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root          9 Aug 10  2023 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root          8 Aug 10  2023 sbin -> usr/sbin
+lrwxrwxrwx   1 root root          7 Aug 10  2023 lib -> usr/lib

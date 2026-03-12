@@ -1,0 +1,8 @@
+/home/vagrant/linux_practice
+├── bin
+├── docs
+│   ├── lsb_data.txt
+│   └── structure.txt
+└── logs
+
+3 directories, 2 files

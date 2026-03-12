@@ -1,0 +1,48 @@
+===== DATE =====
+Thu Mar 12 08:42:57 UTC 2026
+
+===== OS NAME =====
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+
+===== KERNEL VERSION =====
+5.15.0-171-generic
+
+===== CURRENT USER =====
+vagrant
+
+===== UPTIME =====
+ 08:42:57 up 1 min,  0 users,  load average: 1.68, 0.56, 0.20
+
+===== CPU INFO =====
+top - 08:42:57 up 1 min,  0 users,  load average: 1.68, 0.56, 0.20
+Tasks: 115 total,   1 running, 114 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1963.7 total,   1090.5 free,    172.9 used,    700.2 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1628.4 avail Mem 
+
+===== RAM INFO =====
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       172Mi       1.1Gi       0.0Ki       700Mi       1.6Gi
+Swap:             0B          0B          0B
+
+===== DISK INFO =====
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  968K  196M   1% /run
+/dev/sda1        39G  1.8G   37G   5% /
+tmpfs           982M     0  982M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           197M  4.0K  197M   1% /run/user/1000
+vagrant         223G  112G  112G  51% /vagrant
+
+===== TOP 10 ACTIVE PROCESSES =====
+    PID USER     %CPU %MEM COMMAND
+      1 root      5.7  0.6 systemd
+    689 root      2.8  1.9 snapd
+    637 root      1.7  0.0 ext4lazyinit
+      9 root      1.1  0.0 kworker/u4:0-writeback
+     22 root      0.9  0.0 ksoftirqd/1
+    340 root      0.9  0.5 systemd-journal
+      7 root      0.5  0.0 kworker/0:0-events
+     17 root      0.5  0.0 kworker/0:1-events
+     91 root      0.5  0.0 kworker/0:1H-kblockd
+    106 root      0.5  0.0 kworker/1:1H-kblockd

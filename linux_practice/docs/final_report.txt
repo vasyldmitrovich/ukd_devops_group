@@ -1,0 +1,27 @@
+Thu Mar 12 08:39:50 AM UTC 2026
+PRETTY_NAME="Ubuntu 22.04.3 LTS"
+PRETTY_NAME="Ubuntu 22.04.3 LTS"
+5.15.0-91-generic
+vagrant
+ 08:40:29 up 37 min,  1 user,  load average: 0.00, 0.02, 0.01
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       209Mi       2.6Gi       1.0Mi       897Mi       3.3Gi
+Swap:          2.0Gi          0B       2.0Gi
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              382M  948K  381M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   62G  5.3G   54G   9% /
+tmpfs                              1.9G     0  1.9G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/sda2                          2.0G  234M  1.6G  13% /boot
+tmpfs                              382M  4.0K  382M   1% /run/user/1000
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          22  0.2  0.0      0     0 ?        S    08:02   0:05 [ksoftirqd/1]
+vagrant     1044  0.2  0.2  17428  8564 ?        S    08:06   0:05 sshd: vagrant@pts/0
+root        1668  0.2  0.0      0     0 ?        I    08:18   0:03 [kworker/0:2-cgwb_release]
+root        2140  0.2  0.0      0     0 ?        I    08:37   0:00 [kworker/0:1-events]
+root           1  0.1  0.3 167704 13224 ?        Ss   08:02   0:03 /sbin/init =
+root        1178  0.1  0.9 1849916 38160 ?       Ssl  08:13   0:01 /usr/lib/snapd/snapd
+root        1660  0.1  0.0      0     0 ?        I    08:17   0:01 [kworker/1:0-events]
+root           2  0.0  0.0      0     0 ?        S    08:02   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   08:02   0:00 [rcu_gp]

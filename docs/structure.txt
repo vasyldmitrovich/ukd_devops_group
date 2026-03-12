@@ -1,0 +1,8 @@
+/home/admin123/linux_practice
+├── bin
+├── docs
+│   ├── os_info.txt
+│   └── structure.txt
+└── logs
+
+4 directories, 2 files

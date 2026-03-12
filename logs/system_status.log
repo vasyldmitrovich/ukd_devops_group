@@ -1,0 +1,13 @@
+Thu Mar 12 10:13:12 AM EET 2026
+admin123
+ 10:13:12 up 8 min,  1 user,  load average: 0.10, 0.18, 0.09
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              290M  1.4M  289M   1% /run
+efivarfs                            56K  2.5K   54K   5% /sys/firmware/efi/efivars
+/dev/mapper/ubuntu--vg-ubuntu--lv   17G  9.5G  5.8G  63% /
+tmpfs                              1.5G     0  1.5G   0% /dev/shm
+tmpfs                              5.0M   12K  5.0M   1% /run/lock
+/dev/vda2                          2.0G  108M  1.7G   6% /boot
+/dev/vda1                          1.1G  6.4M  1.1G   1% /boot/efi
+tmpfs                              290M  124K  290M   1% /run/user/1000
+/dev/mapper/ubuntu--vg-ubuntu--lv   17G  9.5G  5.8G  63% /

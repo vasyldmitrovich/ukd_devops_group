@@ -1,0 +1,36 @@
+=== Запуск admin_tool.sh (PID: 4305) о Thu Mar 19 08:15:04 AM UTC 2026 ===
+--- System Report ---
+Date: Thu Mar 19 08:15:04 AM UTC 2026
+Hostname: machine
+Uptime: up 2 hours, 19 minutes
+RAM Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       178Mi       2.5Gi       0.0Ki       1.1Gi       3.3Gi
+Swap:          2.0Gi          0B       2.0Gi
+Disk Usage:
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv   62G  5.2G   54G   9% /
+=== Запуск admin_tool.sh (PID: 4314) о Thu Mar 19 08:15:11 AM UTC 2026 ===
+--- Active Users ---
+vagrant  pts/0        2026-03-19 07:56 (10.0.2.2)
+=== Запуск admin_tool.sh (PID: 4319) о Thu Mar 19 08:15:16 AM UTC 2026 ===
+--- Перевірка дисків (>70%) ---
+=== Запуск admin_tool.sh (PID: 4368) о Thu Mar 19 08:15:24 AM UTC 2026 ===
+=== Запуск admin_tool.sh (PID: 4433) о Thu Mar 19 08:37:54 AM UTC 2026 ===
+--- System Report ---
+Date: Thu Mar 19 08:37:54 AM UTC 2026
+Hostname: machine
+Uptime: up 2 hours, 42 minutes
+RAM Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       187Mi       2.5Gi       0.0Ki       1.1Gi       3.3Gi
+Swap:          2.0Gi          0B       2.0Gi
+Disk Usage:
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv   62G  5.2G   54G   9% /
+=== Запуск admin_tool.sh (PID: 4442) о Thu Mar 19 08:37:58 AM UTC 2026 ===
+--- Active Users ---
+vagrant  pts/0        2026-03-19 07:56 (10.0.2.2)
+=== Запуск admin_tool.sh (PID: 4447) о Thu Mar 19 08:38:03 AM UTC 2026 ===
+--- Перевірка дисків (>70%) ---
+=== Запуск admin_tool.sh (PID: 4496) о Thu Mar 19 08:38:08 AM UTC 2026 ===

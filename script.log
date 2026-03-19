@@ -1,0 +1,10 @@
+--- СИСТЕМНИЙ ЗВІТ ---
+Дата: Thu Mar 19 08:30:28 AM UTC 2026
+Назва хоста (hostname): machine
+Час роботи (uptime): up 15 minutes
+Використання оперативної пам'яті (RAM):
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       190Mi       2.9Gi       0.0Ki       636Mi       3.3Gi
+Swap:          2.0Gi          0B       2.0Gi
+--- Активні користувачі (Thu Mar 19 08:30:45 AM UTC 2026) ---
+vagrant  pts/0        2026-03-19 08:17 (10.0.2.2)

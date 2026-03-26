@@ -71,22 +71,54 @@ echo $PCInfo
 
 # Завдання: “Аналіз комп’ютерного класу”
 $PCs = 'localhost', '8.8.8.8', '192.168.1.2', 'CLASSPC-116'
+#$logPath = .\logs\data.log.txt
+#$logPath = .\logs\error.log.txt
+$logPath = "E:\Programming\Projects\UKD\ukd_devops_group\05_PowerShell_Scripting\logs\data.log.txt"
+$errorPath = "E:\Programming\Projects\UKD\ukd_devops_group\05_PowerShell_Scripting\logs\error.log.txt"
 
 foreach ($PC in $PCs)
 {
     # Test-Connection $PC
-
     if (Test-Connection $PC -Quiet) {
-    Write-Host "$PC. is online"
+        echo "$PC. is online" | Out-File -Append -FilePath $logPath
     } 
     else {
-        Write-Host "$PC. is offline"
+        echo "$PC. is offline" | Out-File -Append -FilePath $errorPath
+        continue
     }
 
+    # Process count
+    $processCount = (Get-Process).Count
+    $serviceCount = (Get-Service).Count
+    echo "Process count: $processCount." | Out-File -Append -FilePath $logPath
+    echo "Service count: $serviceCount." | Out-File -Append -FilePath $logPath
+    
+    # Ram usage
+    Get-CimInstance Win32_OperatingSystem | Select FreePhysicalMemory, TotalVisibleMemorySize | Out-File -Append -FilePath $logPath
+    $os = Get-CimInstance Win32_OperatingSystem
+    $usedMemory = (($os.TotalVisibleMemorySize - $os.FreePhysicalMemory) / $os.TotalVisibleMemorySize) * 100
+
+    $usedMemoryPercent = [math]::Round($usedMemory, 2)
+    echo "Ram usage percentage: $usedMemoryPercent."  | Out-File -Append -FilePath $logPath
+    if ($usedMemoryPercent -gt 70)
+    {
+        Write-Warning "Used Ram is greater than 70%" | Out-File -Append -FilePath $logPath
+    }
+
+    # Users count
+    $usersCount = (Get-LocalUser).Count
+    echo "Users count: $usersCount." | Out-File -Append -FilePath $logPath
+    echo "Current user: $env:USERNAME." | Out-File -Append -FilePath $logPath
+
+    # PowerShell version
+    echo "PowerShell version:" | Out-File -Append -FilePath $logPath
+    echo $PSVersionTable.PSVersion | Out-File -Append -FilePath $logPath
+
+    # 5 biggest processes
+    echo "Biggest processes:" | Out-File -Append -FilePath $logPath
+    Get-Process | Sort-Object -Property CPU -descending | Select-Object -First 5 | Out-File -Append -FilePath $logPath
+
+
+    echo "======================================================" | Out-File -Append -FilePath $logPath
 
 }
-
-
-
-
-

@@ -1,0 +1,11 @@
+--- REPORT: Thu Mar 19 08:21:52 AM UTC 2026 ---
+Hostname: machine
+Uptime: up 18 minutes
+RAM Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       287Mi       3.3Gi       3.7Mi       241Mi       3.4Gi
+Swap:          3.8Gi          0B       3.8Gi
+Disk Usage:
+/dev/mapper/ubuntu--vg-ubuntu--lv   19G  5.5G   12G  33% /
+/dev/vda2                          2.0G   99M  1.7G   6% /boot
+/dev/vda1                          1.1G  6.4M  1.1G   1% /boot/efi

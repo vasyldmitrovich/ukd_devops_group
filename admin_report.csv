@@ -1,0 +1,4 @@
+﻿"ComputerName","OS","PSVersion","UsersCount","TopCPU","Status"
+"CLASSPC-287","Майкрософт Windows 10 Pro","5.1.19041.5965","6","chrome, RobloxPlayerBeta, chrome, chrome, chrome","Online"
+"NonExistentPC","Unknown","N/A","0","N/A","Offline/Error"
+"127.0.0.1","Remote Windows","5.1.19041.5965","N/A","chrome, RobloxPlayerBeta, chrome, chrome, chrome","Online"

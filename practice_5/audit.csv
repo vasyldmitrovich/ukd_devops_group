@@ -1,0 +1,5 @@
+﻿"Computer","Status","OS","PowerShell","Users","TopProcesses"
+"localhost","Online","Майкрософт Windows 11 Pro","5.1.22000.2538","5","chrome, chrome, chrome, MsMpEng, dwm"
+"127.0.0.1","Online","Майкрософт Windows 11 Pro","5.1.22000.2538","5","chrome, chrome, chrome, MsMpEng, dwm"
+"8.8.8.8","Online","Unknown (remote)","Unknown","N/A",""
+"invalid-host","Offline","N/A","N/A","N/A","N/A"

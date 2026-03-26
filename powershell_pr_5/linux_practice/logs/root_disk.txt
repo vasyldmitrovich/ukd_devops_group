@@ -1,1 +1,0 @@
-/dev/mapper/ubuntu--vg-ubuntu--lv   62G  5.2G   54G   9% /

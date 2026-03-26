@@ -1,0 +1,23 @@
+--- SYSTEM DIAGNOSTIC REPORT (Thu Mar 12 10:24:29 AM EET 2026) ---
+Description:	Ubuntu 22.04.3 LTS
+Kernel Version: 5.15.0-91-generic
+Current User: vagrant
+up 20 minutes
+--- Resource Usage ---
+%Cpu(s):  0.0 us,  2.3 sy,  0.0 ni, 97.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       197Mi       722Mi       3.0Mi       1.0Gi       1.6Gi
+Swap:          2.0Gi          0B       2.0Gi
+total                               65G  5.5G   57G   9% -
+--- Top 10 Processes (by %MEM) ---
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         615  0.8  2.2 949340 44612 ?        Ssl  10:04   0:10 /usr/lib/snapd/snapd
+root         388  0.0  1.3 289452 27232 ?        SLsl 10:04   0:00 /sbin/multipathd -d -s
+root        1812  0.0  1.0 295584 20728 ?        Ssl  10:10   0:00 /usr/libexec/packagekitd
+root         914  0.0  0.9 202892 19188 ?        Ss   10:04   0:00 /usr/sbin/apache2 -k start
+root         608  0.0  0.9  32736 19048 ?        Ss   10:04   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         354  0.0  0.9  48140 19020 ?        S<s  10:04   0:00 /lib/systemd/systemd-journald
+systemd+     562  0.0  0.7  26332 15272 ?        Ss   10:04   0:00 /lib/systemd/systemd-resolved
+root           1  0.1  0.6 167492 12924 ?        Ss   10:04   0:02 /sbin/init =
+root         620  0.0  0.6 392584 12840 ?        Ssl  10:04   0:00 /usr/libexec/udisks2/udisksd
+root         639  0.0  0.6 317960 12348 ?        Ssl  10:04   0:00 /usr/sbin/ModemManager

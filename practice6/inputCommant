@@ -1,0 +1,8 @@
+awk -F', ' '
+$4 ~ /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.com$/ &&
+$5 ~ /^[A-Za-z0-9]{8,}$/ &&
+$5 ~ /[a-z]/ &&
+$5 ~ /[A-Z]/ &&
+$5 ~ /[0-9]/ {
+    printf "{\n  \"email\": \"%s\",\n  \"user\": \"%s %s\",\n  \"password_strength\": \"medium\",\n  \"hint\": \"%s should include at least one special symbol!\"\n}\n", $4, $2, $3, $5
+}' practice6/user_data_task2.txt > practice6/password_medium_report.json

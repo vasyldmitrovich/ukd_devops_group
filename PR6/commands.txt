@@ -1,0 +1,14 @@
+# Task 1: Filtering emails for "sudo" users with .org domain
+grep -E "sudo[a-zA-Z0-9._+-]+@[a-zA-Z0-9._+-]+\.org" user_data.txt
+
+# Task 2: Searching for weak passwords (ending with .com and alphanumeric characters)
+grep -E "[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.com, [a-zA-Z0-9]+$" user_data_task2.txt
+
+# Task 3: Generating a report for weak passwords using sed capture groups
+grep -E '[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.com, [a-zA-Z0-9]+$' user_data_task2.txt | \
+sed -E "s/[0-9]+, ([a-zA-Z]+), [a-zA-Z]+, ([^,]+), ([a-zA-Z0-9]+)/{\"\2\" : \"\1's password is \3, it should be improved\!\"}/" > weak_password_report.txt
+
+# Task 4: Advanced password analysis using Lookaheads and generating a JSON report
+grep -E "[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.com" user_data_task2.txt | \
+grep -P ", (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$" | \
+awk -F ", " '{printf "{\"email\": \"%s\", \"user\": \"%s %s\", \"password_strength\": \"medium\", \"hint\": \"%s should include at least one special symbol!\"}\n", $4, $2, $3, $5}' > password_medium_report.json

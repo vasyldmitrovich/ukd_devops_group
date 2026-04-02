@@ -1,0 +1,10 @@
+task 1:
+grep -E sudo.*\.org ./user_data.txt
+
+task 2:
+grep -E '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.org, [a-zA-Z0-9]+$' ./user_data.txt
+
+
+task 3:
+grep -E '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.org, [a-zA-Z0-9]+$' ./user_data.txt | awk -F', *' '{printf "{\"%s\" : \"%s'\''s password is %s, it should be improved!\"}\n", $4, $2, $5}'
+

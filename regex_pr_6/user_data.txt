@@ -1,0 +1,5 @@
+sudo_admin@company.org
+user123@gmail.com
+sudo_root@system.org
+manager@org.net
+sudo.tester@dev.org

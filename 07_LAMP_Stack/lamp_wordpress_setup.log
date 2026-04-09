@@ -1,0 +1,71 @@
+<<EOF
+<VirtualHost *:80>
+    ServerName wp.prod.local
+    DocumentRoot /var/www/wordpress
+
+    <Directory /var/www/wordpress>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/wp_prod_error.log
+    CustomLog \${APACHE_LOG_DIR}/wp_prod_access.log combined
+</VirtualHost>
+EOF>>
+<<EOF
+<VirtualHost *:80>
+    ServerName wp.prod.local
+    DocumentRoot /var/www/wordpress
+
+    <Directory /var/www/wordpress>
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog \${APACHE_LOG_DIR}/wp_prod_error.log
+    CustomLog \${APACHE_LOG_DIR}/wp_prod_access.log combined
+</VirtualHost>
+Enabling site wordpress-prod.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2026-04-09 07:44:11 UTC; 29min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 13182 (apache2)
+      Tasks: 6 (limit: 4443)
+     Memory: 10.6M
+        CPU: 326ms
+     CGroup: /system.slice/apache2.service
+             ├─13182 /usr/sbin/apache2 -k start
+             ├─17093 /usr/sbin/apache2 -k start
+             ├─17094 /usr/sbin/apache2 -k start
+             ├─17095 /usr/sbin/apache2 -k start
+             ├─17096 /usr/sbin/apache2 -k start
+             └─17097 /usr/sbin/apache2 -k start
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2026-04-09 08:10:25 UTC; 3min 26s ago
+       Docs: man:nginx(8)
+    Process: 17546 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 17547 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 17655 (nginx)
+      Tasks: 3 (limit: 4443)
+     Memory: 4.9M
+        CPU: 116ms
+     CGroup: /system.slice/nginx.service
+             ├─17655 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─17658 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             └─17659 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+● mariadb.service - MariaDB 10.6.23 database server
+     Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2026-04-09 07:15:09 UTC; 59min ago
+       Docs: man:mariadbd(8)
+             https://mariadb.com/kb/en/library/systemd/
+   Main PID: 5062 (mariadbd)
+     Status: "Taking your SQL requests now..."
+      Tasks: 8 (limit: 29326)
+     Memory: 67.8M
+        CPU: 1.829s
+     CGroup: /system.slice/mariadb.service
+             └─5062 /usr/sbin/mariadbd

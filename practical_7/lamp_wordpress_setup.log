@@ -1,0 +1,19 @@
+Linux machine 5.15.0-91-generic #101-Ubuntu SMP Tue Nov 14 13:30:08 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.3 LTS
+Release:	22.04
+Codename:	jammy
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2026-04-09 07:12:57 UTC; 11s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+   Main PID: 2270 (apache2)
+      Tasks: 55 (limit: 4443)
+     Memory: 5.0M
+        CPU: 56ms
+     CGroup: /system.slice/apache2.service
+             ├─2270 /usr/sbin/apache2 -k start
+PHP 8.1.2-1ubuntu2.23 (cli) (built: Jan  7 2026 08:37:41) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.1.2, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.2-1ubuntu2.23, Copyright (c), by Zend Technologies

@@ -1,0 +1,3 @@
+Fixed ERR_TOO_MANY_REDIRECTS by configuring WP_HOME and WP_SITEURL in wp-config.php
+Configured Nginx proxy headers for Host and X-Forwarded-Proto
+Successfully configured and tested automated SQL backup script.

@@ -1,2 +1,0 @@
-Error: PHP Warning: require_once(/var/www/wordpress/wp-config.php): Permission denied
-Fix: Changed permissions to 644 and owner to www-data.

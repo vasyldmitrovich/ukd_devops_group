@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { color: white; font-family: sans-serif; text-align: center; background: #f4f4f4; padding-top: 50px; }
+        .card { background: black; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #009688; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Docker Nginx Pro</h1>
+        <p>Hostname: <b id="hostname"></b></p>
+        <p>Current Time: <b id="time"></b></p>
+    </div>
+    <script>
+        document.getElementById('hostname').innerText = window.location.hostname;
+        setInterval(() => {
+            document.getElementById('time').innerText = new Date().toLocaleString();
+        }, 1000);
+    </script>
+</body>
+</html>

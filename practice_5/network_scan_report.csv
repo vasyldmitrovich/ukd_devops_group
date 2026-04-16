@@ -1,0 +1,2 @@
+﻿"IP";"ComputerName";"OS";"CPULoad";"TopProcesses";"LoggedUsers"
+"192.168.56.1";"LAOCOON";"Майкрософт Windows 11 Home";"11%";"System, svchost, chrome, dwm, WUDFHost";"SYSTEM, LOCAL SERVICE, NETWORK SERVICE, nazar, DWM-1, DWM-2, DWM-3, DWM-4, UMFD-0, UMFD-4"

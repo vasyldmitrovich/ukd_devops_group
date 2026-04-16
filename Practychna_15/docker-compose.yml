@@ -1,0 +1,49 @@
+services:
+  db:
+    image: mariadb:latest
+    container_name: db_service
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    volumes:
+      - ./db_data_local:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: always
+
+  app:
+    build: ./app
+    container_name: app_service
+    depends_on:
+      - db
+    environment:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+      MYSQL_DATABASE: app_db
+
+  web:
+    image: nginx:alpine
+    container_name: web_proxy
+    ports:
+      - "8089:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app
+
+  adminer:
+    image: adminer
+    container_name: adminer_service
+    ports:
+      - "8085:8080"
+    profiles:
+      - tools
+    depends_on:
+      - db

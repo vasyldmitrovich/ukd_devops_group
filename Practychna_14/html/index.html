@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Docker Lab 5+</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background: #282c34; color: white; text-align: center; padding-top: 50px; }
+        .container { border: 2px solid #61dafb; display: inline-block; padding: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Привіт з Docker Desktop (Mac) 🍏</h1>
+        <p>Hostname контейнера: <b><span id="host"></span></b></p>
+        <p>Поточний час: <span id="time"></span></p>
+    </div>
+    <script>
+        document.getElementById('host').innerText = window.location.hostname;
+        setInterval(() => { document.getElementById('time').innerText = new Date().toLocaleString(); }, 1000);
+    </script>
+</body>
+</html>

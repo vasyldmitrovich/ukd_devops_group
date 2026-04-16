@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Docker Site</title>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+margin-top:50px;
+background:#f2f2f2;
+}
+h1{color:#333;}
+</style>
+</head>
+<body>
+<h1>My Docker Website</h1>
+<p>Hostname: <span id="host"></span></p>
+<p id="time"></p>
+
+<script>
+document.getElementById("host").innerHTML=window.location.hostname;
+setInterval(()=>{
+document.getElementById("time").innerHTML=new Date();
+},1000);
+</script>
+</body>
+</html>

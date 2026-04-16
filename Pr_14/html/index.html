@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><style>body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #f4f4f4; }</style></head>
+<body>
+    <h1>Docker Web Server</h1>
+    <p>Hostname: <span id="host"></span></p>
+    <p>Current Time: <span id="time"></span></p>
+    <script>
+        document.getElementById('host').innerText = window.location.hostname;
+        setInterval(() => { document.getElementById('time').innerText = new Date().toLocaleString(); }, 1000);
+    </script>
+</body>
+</html>

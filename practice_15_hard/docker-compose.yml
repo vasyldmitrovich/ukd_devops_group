@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # 1. Database
+  db:
+    image: mariadb:10.6
+    container_name: db_service
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. Application Layer
+  app:
+    image: node:18-alpine
+    container_name: app_service
+    working_dir: /usr/src/app
+    volumes:
+      - ./app:/usr/src/app
+    command: sh -c "npm install && npm start"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+
+  # 3. Web Layer (Reverse Proxy)
+  web:
+    image: nginx:alpine
+    container_name: nginx_service
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app
+
+  # 4. Bonus - Adminer (Графічний інтерфейс для БД)
+  adminer:
+    image: adminer
+    container_name: adminer_service
+    restart: always
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
+
+volumes:
+  db_data:

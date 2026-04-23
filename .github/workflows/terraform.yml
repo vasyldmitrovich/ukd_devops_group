@@ -8,6 +8,11 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    
+    # Вказуємо Terraform заходити в твою папку з кодом
+    defaults:
+      run:
+        working-directory: ./pract16_lvl4
 
     steps:
       - name: Checkout
@@ -18,9 +23,21 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
+        env:
+          TF_VAR_MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+          TF_VAR_MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
+          TF_VAR_MONGODB_ATLAS_ORGANIZATION_ID: ${{ secrets.MONGODB_ATLAS_ORGANIZATION_ID }}
 
       - name: Terraform Plan
         run: terraform plan
+        env:
+          TF_VAR_MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+          TF_VAR_MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
+          TF_VAR_MONGODB_ATLAS_ORGANIZATION_ID: ${{ secrets.MONGODB_ATLAS_ORGANIZATION_ID }}
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+        env:
+          TF_VAR_MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+          TF_VAR_MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
+          TF_VAR_MONGODB_ATLAS_ORGANIZATION_ID: ${{ secrets.MONGODB_ATLAS_ORGANIZATION_ID }}

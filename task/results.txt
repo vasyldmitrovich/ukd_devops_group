@@ -1,0 +1,9 @@
+Task 1 result:
+5, David, Miller, sudo_david+-millersell@ya2hoo.org, 23456
+7, James, Anderson, sudojamesandersonghotmaI_l.org, 34567
+15, Noah, Scott, sudonoah_+scottgyahoo.org, 90876
+
+Task 2 result:
+1, Bob, Sinkler, sudobobbsinnn@gmail.com, 12345
+4, Sarah, Williams, sarahwills@gmail.com, 98765
+6, Emily, Davis, emilydavis@gmail.com, 87654

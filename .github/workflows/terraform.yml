@@ -3,7 +3,7 @@ name: Terraform
 on:
   push:
     branches:
-      - feature/tf-level-5
+      - feature-tf-level-5-Alina-Dmytruk
 
 jobs:
   terraform:

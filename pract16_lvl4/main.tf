@@ -8,13 +8,13 @@ terraform {
 }
 
 provider "mongodbatlas" {
-  public_key  = var.MONGODB_ATLAS_PUBLIC_KEY
-  private_key = var.MONGODB_ATLAS_PRIVATE_KEY
+  public_key  = var.MONGODB_ATLAS_PUBLIC_KEY_DMYTRUK
+  private_key = var.MONGODB_ATLAS_PRIVATE_KEY_DMYTRUK
 }
 
 resource "mongodbatlas_project" "lab_project" {
   name   = "Terraform-Project-Alina"
-  org_id = var.MONGODB_ATLAS_ORGANIZATION_ID
+  org_id = var.MONGODB_ATLAS_ORGANIZATION_ID_DMYTRUK
 }
 
 resource "mongodbatlas_project_ip_access_list" "ip" {

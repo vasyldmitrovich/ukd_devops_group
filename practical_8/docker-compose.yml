@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web-server:
+    image: nginx:latest
+    container_name: maksym-nginx-compose
+    ports:
+      - "9999:80"
+    restart: always

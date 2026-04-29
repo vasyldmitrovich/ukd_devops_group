@@ -1,0 +1,37 @@
+name: Terraform
+
+on:
+  push:
+    branches:
+      - Oleniak_Serhii
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: 10_Terraform/tf-mongodbatlas
+
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: 10_Terraform/tf-mongodbatlas
+        env:
+          TF_VAR_MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY_OLENIAK }}
+          TF_VAR_MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY_OLENIAK }}
+          TF_VAR_MONGODB_ATLAS_ORGANIZATION_ID: ${{ secrets.MONGODB_ATLAS_ORGANIZATION_ID_OLENIAK }}
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+        working-directory: 10_Terraform/tf-mongodbatlas
+        env:
+          TF_VAR_MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY_OLENIAK }}
+          TF_VAR_MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY_OLENIAK }}
+          TF_VAR_MONGODB_ATLAS_ORGANIZATION_ID: ${{ secrets.MONGODB_ATLAS_ORGANIZATION_ID_OLENIAK }}

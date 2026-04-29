@@ -14,7 +14,7 @@ provider "mongodbatlas" {
 
 # Project
 resource "mongodbatlas_project" "project" {
-  name   = "my-terraform-project"
+  name   = "github-actions-terraform-test-project"
   org_id = var.MONGODB_ATLAS_ORGANIZATION_ID
 }
 

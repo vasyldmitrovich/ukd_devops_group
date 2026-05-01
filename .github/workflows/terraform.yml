@@ -1,0 +1,35 @@
+name: Terraform
+
+on:
+  push:
+    branches:
+      - feature/tf-level-5
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    env:
+      # Передаємо секрети з GitHub у змінні середовища, які розуміє Terraform
+      MONGODB_ATLAS_PUBLIC_KEY: ${{ secrets.MONGODB_ATLAS_PUBLIC_KEY }}
+      MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
+      TF_VAR_org_id: ${{ secrets.MONGODB_ATLAS_ORGANIZATION_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
+      - name: Terraform Init
+        # Вказуємо шлях до папки, де лежить твій код
+        run: terraform init
+        working-directory: ./Terraform_Practice
+
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: ./Terraform_Practice
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+        working-directory: ./Terraform_Practice

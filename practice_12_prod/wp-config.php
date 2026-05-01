@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'wordpress_db' );
 
 /** Database username */
-define( 'DB_USER', 'wp_user' );
+define( 'DB_USER', 'wp_prod' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'password123' );
+define( 'DB_PASSWORD', 'StrongPass123!' );
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'T&9-?w8&3Bd.%b3Q>.beo*pe}f#xmK-!G}bsP`I}Baqr!2od)e,HoM%<K<R |l_.' );
-define( 'SECURE_AUTH_KEY',  'b9m@/&(}yrxG!+vr.V)% Qt|kT|Fz=.OL%|o]Mc{sO;m_A&e*TR?Qbx&u]/j(2H*' );
-define( 'LOGGED_IN_KEY',    '?:,h@^ Q$8hmyA:rd11H!^4p3-0`nGpx-(yQe&L}6VQNqj^3]jb)G:be;hTna.s%' );
-define( 'NONCE_KEY',        'm247du~/YUul:? ;<bD4Ee:3:Wu6G5W|xncXm8R?PHs>Neg/n)IfT8lEy92DTr$l' );
-define( 'AUTH_SALT',        'c}}_qsks@keH4%`3GBHS$U2U-`D>Z`_rP}?K:cfj3 FO;AZ>;0P)c5H_Eq@h6Ymg' );
-define( 'SECURE_AUTH_SALT', 'r*]m06M(=qz;x6r8tytiiK%nRQV8Q.(,:$OU}J;Rc!F4X}v /z1KvM#IS1#EnBD:' );
-define( 'LOGGED_IN_SALT',   '$CZ1XnYyau?U1GzJu$W$&MzW:o_>7ji]}#r6e:`jvprxL@ !txI)k]]^|W=nwT:v' );
-define( 'NONCE_SALT',       '+F!B +btxwTY8y|,p,=,Ob)HC),ylD^R{|e]YiV&~Fv`O}ve1)9@@DD}pF1d%kzt' );
+define( 'AUTH_KEY',         ';s#i:spqj}EXE4_59+H6[e(9$Gd.96vm)v)q(6?<-Y+=~R`e+Aub?tkjDr,iLb}9' );
+define( 'SECURE_AUTH_KEY',  'Bwz%o%Y4x]?+VF%)^EU]%oj$4}(~k,`dmrfY##dOTS*<8qSP?]~<9Vp}H%nG0l,L' );
+define( 'LOGGED_IN_KEY',    ':1^if2&b:UIH%Z,0.WcTsk343JLehg+KQD+16VA$FSc~]W|*+63fFcR]gVFroJG+' );
+define( 'NONCE_KEY',        '6~mSsCy5f&-O}I5L#/KLqu+9;gpp;`Ikh,lbW;qKx7R[m%|dIAz)zx%GC{V8+:=;' );
+define( 'AUTH_SALT',        'kj>7-dS&~pFaEM/6|)!m`gRW{D%3z>L<?J!R}%Kzo.t,l+{p<6]) l[VKCtL=ZBt' );
+define( 'SECURE_AUTH_SALT', '1X6Fxf8*LV1!IhW-hcx&8vRjaGF3=f;@by+yG1CP)v,ah7<.lC`3RxYt1iI=aV^6' );
+define( 'LOGGED_IN_SALT',   'M<?%o%<CGpMFXfZ,1GweB;9uxBY,t<-tI],4wHVYYN;2#[(6ethZpSrvYdi@tXy?' );
+define( 'NONCE_SALT',       '3p! 7oi(4`S>M8 /BFl!ATQ{OT69E|izX4icVqKkL@;2;]a*6(`qN{O8qT5Ye=wb' );
 
 /**#@-*/
 
@@ -100,3 +100,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+define('WP_HOME','http://localhost');
+define('WP_SITEURL','http://localhost');
+
